@@ -5,17 +5,17 @@ export const GlobalStyle = createGlobalStyle`
 h1,
 h2,
 h3 {
-    margin: 0;
+    margin: 0 auto;
 }
 
 ul,
 ol{
-    margin: 0;
-    padding: 0;
+    margin: 12px;
+    padding: 8px;
     list-style: none;
 }
 
-body {
+/* body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -27,4 +27,5 @@ body {
   code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
       monospace;
-  }`;
+  } */
+  `;

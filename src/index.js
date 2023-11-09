@@ -5,16 +5,17 @@ import { ThemeProvider } from 'styled-components';
 
 const theme = {
   colors: {
-    white: '#fafafa',
-    blue: 'blue',
-    yellow: 'yellow',
-    accent: 'green',
+    background: '#93c592',
+    backgroundBtn: '#679267',
+    backgroundBorder: '#173620',
+    color: '#173620',
+    colorBtn: '#f2f3f4',
+    accentBtn: '#173620',
+    accentColorBtn: '#679267',
   },
 
   radii: {
     sm: '4px',
-    md: '8px',
-    lg: '16px',
   },
 
   spacing: value => `${value * 4}px`,
