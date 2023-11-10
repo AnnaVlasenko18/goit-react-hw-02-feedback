@@ -1,15 +1,9 @@
-import { FeedbackOptions } from 'components/FeedbackOptions/FeedbackOptions';
-import { Statistics } from 'components/Statistics/Statistics';
-import { Container, ContainerTitle } from './Section.styled';
+import { ContainerTitle, Title } from './Section.styled';
 
-export const Section = () => {
+export const Section = ({ title, children }) => {
   return (
-    <Container>
-      <ContainerTitle>Please leave feedback</ContainerTitle>
-      <FeedbackOptions />
-      <>
-        <Statistics />
-      </>
-    </Container>
+    <ContainerTitle>
+      {title && <Title>{title}</Title>} {children}
+    </ContainerTitle>
   );
 };

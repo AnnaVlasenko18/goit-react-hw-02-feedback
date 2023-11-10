@@ -11,11 +11,15 @@ const theme = {
     color: '#173620',
     colorBtn: '#f2f3f4',
     accentBtn: '#173620',
-    accentColorBtn: '#679267',
+    accentColorBtn: 'white',
   },
 
   radii: {
     sm: '4px',
+  },
+
+  font: {
+    fontSize: '18px',
   },
 
   spacing: value => `${value * 4}px`,

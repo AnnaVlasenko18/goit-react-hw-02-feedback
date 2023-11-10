@@ -1,16 +1,10 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
-  background: ${props => props.theme.colors.background};
-  width: 500px;
+export const ContainerTitle = styled.div`
+  margin-bottom: ${props => props.theme.spacing(6)};
   display: flex;
-  flex-direction: column;
-  margin: 24px;
-  padding: ${props => props.theme.spacing(3)};
-  border-radius: ${props => props.theme.radii.sm};
-  border: 2px solid ${props => props.theme.colors.backgroundBorder};
 `;
 
-export const ContainerTitle = styled.h1`
-  margin-bottom: ${props => props.theme.spacing(6)};
+export const Title = styled.h2`
+  padding-bottom: ${props => props.theme.spacing(6)};
 `;
