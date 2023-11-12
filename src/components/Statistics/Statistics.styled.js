@@ -9,5 +9,3 @@ export const StatisticsItem = styled.li`
   margin-bottom: ${props => props.theme.spacing(3)};
   font-size: 20px;
 `;
-
-// export const Text = styled.

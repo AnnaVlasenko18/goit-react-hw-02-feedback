@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const FeedbackOptionsList = styled.div`
   display: flex;
-  /* margin-bottom: ${props => props.theme.spacing(8)}; */
 `;
 
 export const FeedbackButton = styled.button`
