@@ -2,20 +2,9 @@ import { Component } from 'react';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistics } from './Statistics/Statistics';
-import { Notification } from './Section/Notification/Notification';
+import { Notification } from './Notification/Notification';
 import { GlobalStyle } from './GlobalStyle';
-import styled from 'styled-components';
-
-const Wrapper = styled.div`
-  background: ${props => props.theme.colors.background};
-  width: 600px;
-  display: flex;
-  flex-direction: column;
-  margin: 24px;
-  padding: ${props => props.theme.spacing(4)};
-  border-radius: ${props => props.theme.radii.sm};
-  border: 2px solid ${props => props.theme.colors.backgroundBorder};
-`;
+import { Wrapper } from './App.styled';
 
 export class App extends Component {
   state = {
@@ -42,26 +31,28 @@ export class App extends Component {
   }
 
   render() {
-    const options = Object.keys(this.state);
-    const total = this.countTotalFeedback();
+    const { good, neutral, bad } = this.state;
+    // const total = this.countTotalFeedback();
     return (
       <Wrapper>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={options}
+            options={['good', 'neutral', 'bad']}
             onLeaveFeedback={this.countFeedback}
           />
         </Section>
 
         <Section title="Statistic">
-          {total ? (
+          {this.countTotalFeedback() ? (
             <Statistics
-              state={this.state}
-              total={total}
+              good={good}
+              neutral={neutral}
+              bad={bad}
+              total={this.countTotalFeedback()}
               positivePercentage={this.countPositiveFeedbackPercentage()}
             />
           ) : (
-            <Notification />
+            <Notification message="There is no feedback" />
           )}
         </Section>
         <GlobalStyle />
